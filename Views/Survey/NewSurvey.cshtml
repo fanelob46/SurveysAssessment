@@ -1,0 +1,269 @@
+﻿
+@{
+    ViewData["Title"] = "Survey";
+}
+
+<div class="row" style="margin-left:50px;margin-top:50px;">
+    <div class="col-md-9">
+        <div>
+            <div class="row">
+                <div class="col-md-3">
+                    Personal Details:
+                </div>
+                <div class="col-md-9">
+                    <div class="form-group">
+                        <label class="control-label">Full Names</label>
+                        <input class="form-control survey-user-details-input" id="Name"/>
+                        <span class="text-danger" id="NameError"></span>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label class="control-label">Email</label>
+                        <input class="form-control survey-user-details-input" type="email" id="Email"/>
+                        <span class="text-danger" id="EmailError"></span>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label class="control-label">Date Of Birth</label>
+                        <input class="form-control survey-user-details-input" type="date" id="DateOfBirth"/>
+                        <span class="text-danger" id="DateOfBirthError"></span>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label class="control-label">Contact Number</label>
+                        <input class="form-control survey-user-details-input" type="tel" id="ContactNumber"/>
+                        <span class="text-danger" id="ContactNumberError"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-3">
+                    What is your favourite food?
+                </div>
+                <div class="col-md-9 row">
+                    <div class="form-check fav-foods-check-group">
+                        <input class="form-check-input fav-foods-check" type="checkbox" id="FavFoodPizza"/>
+                        <label class="form-check-label">Pizza</label>
+                    </div>
+                    <div class="form-check fav-foods-check-group">
+                        <input class="form-check-input fav-foods-check" type="checkbox" id="FavFoodPasta" />
+                        <label class="form-check-label">Pasta</label>
+                    </div>
+                    <div class="form-check fav-foods-check-group">
+                        <input class="form-check-input fav-foods-check" type="checkbox" id="FavFoodPapNWors" />
+                        <label class="form-check-label">Pap and Wors</label>
+                    </div>
+                    <div class="form-check fav-foods-check-group">
+                        <input class="form-check-input fav-foods-check" type="checkbox" id="FavFoodOther" />
+                        <label class="form-check-label">Other</label>
+                    </div>
+                </div>
+                <span class="text-danger" id="FavFoodError"></span>
+            </div>
+            <div class="mt-5">
+                <div>
+                    Please rate your level of agreement on a scale from 1 to 5, with 1 being "strongly agree" and 5 being "strongly disagree."
+                </div>
+                <div>
+                    <table class="table table-bordered">
+                        <thead style="background:silver; border-color:black">
+                            <tr>
+                                <td></td>
+                                <td class="rating-columns">Strongly Agree</td>
+                                <td class="rating-columns">Agree</td>
+                                <td class="rating-columns">Neutral</td>
+                                <td class="rating-columns">Disagree</td>
+                                <td class="rating-columns">Strongly Disagree</td>
+                            </tr>
+                        </thead>
+                        <tbody style="border-color:deepskyblue">
+                            <tr>
+                                <td>
+                                    I like to watch movies
+                                </td>
+                                <td class="rating-columns">
+                                    <input name="Movies" type="radio" value="1" id="Same" class="rating-radio" />
+                                </td>
+                                <td class="rating-columns">
+                                    <input name="Movies" type="radio" value="2" id="Same1" class="rating-radio" />
+                                </td>
+                                <td class="rating-columns">
+                                    <input name="Movies" type="radio" value="3" id="Same2" class="rating-radio" />
+                                </td>
+                                <td class="rating-columns">
+                                    <input name="Movies" type="radio" value="4" id="Same3" class="rating-radio" />
+                                </td>
+                                <td class="rating-columns">
+                                    <input name="Movies" type="radio" value="5" id="Same3b" class="rating-radio" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    I like to listen to radio
+                                </td>
+                                <td class="rating-columns">
+                                    <input name="Radio" type="radio" value="1" id="Same4" class="rating-radio" />
+                                </td>
+                                <td class="rating-columns">
+                                    <input name="Radio" type="radio" value="2" id="Same5" class="rating-radio" />
+                                </td>
+                                <td class="rating-columns">
+                                    <input name="Radio" type="radio" value="3" id="Same6" class="rating-radio" />
+                                </td>
+                                <td class="rating-columns">
+                                    <input name="Radio" type="radio" value="4" id="Same7" class="rating-radio" />
+                                </td>
+                                <td class="rating-columns">
+                                    <input name="Radio" type="radio" value="5" id="Same7b"  class="rating-radio"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>I like to eat out</td>
+                                <td class="rating-columns">
+                                    <input name="EatOut" type="radio" value="1" id="Same8" class="rating-radio" />
+                                </td>
+                                <td class="rating-columns">
+                                    <input name="EatOut" type="radio" value="2" id="Same9" class="rating-radio" />
+                                </td>
+                                <td class="rating-columns">
+                                    <input name="EatOut" type="radio" value="3" id="Same10" class="rating-radio" />
+                                </td>
+                                <td class="rating-columns">
+                                    <input name="EatOut" type="radio" value="4" id="Same11" class="rating-radio" />
+                                </td>
+                                <td class="rating-columns">
+                                    <input name="EatOut" type="radio" value="5" id="Same11b" class="rating-radio" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    I like to watch TV
+                                </td>
+                                <td class="rating-columns">
+                                    <input name="TV" type="radio" value="1" id="Same12" class="rating-radio" />
+                                </td>
+                                <td class="rating-columns">
+                                    <input name="TV" type="radio" value="2" id="Same13" class="rating-radio" />
+                                </td>
+                                <td class="rating-columns">
+                                    <input name="TV" type="radio" value="3" id="Same14" class="rating-radio" />
+                                </td>
+                                <td class="rating-columns">
+                                    <input name="TV" type="radio" value="4" id="Same15" class="rating-radio" />
+                                </td>
+                                <td class="rating-columns">
+                                    <input name="TV" type="radio" value="5" id="Same16" class="rating-radio" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <span class="text-danger" id="RatingsError"></span>
+            </div>
+            <div class="form-group text-center mt-4">
+                <input value="SUBMIT" class="btn btn-primary submit-btn" onclick="InsertUserSurvey()" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    function CheckEmail(email)
+    {
+        if (email == null || email == "")
+            return false;
+
+        var emailRegex = /^\w+([\.-]?\w+)*@@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+        return email.match(emailRegex);
+    }
+
+    function ValidateForm(name, email, DOB, contact, favFoodPizza, favFoodPasta, favFoodPapNWors, favFoodOther, watchMovies, listenRadio, eatOut, watchTV)
+    {
+        $("#NameError").text("");
+        $("#EmailError").text("");
+        $("#DateOfBirthError").text("");
+        $("#ContactNumberError").text("");
+        $("#FavFoodError").text("");
+        $("#RatingsError").text("");
+        
+        var isValid = true;
+
+        if (name == "")
+        {
+            $("#NameError").text("Please enter full name");
+            isValid = false;
+        }
+        if (email == "" || !CheckEmail(email))
+        {
+            $("#EmailError").text("Please enter a valid email");
+            isValid = false;
+        }
+        if (DOB == "")
+        {
+            $("#DateOfBirthError").text("Please select valid date of birth");
+            isValid = false;
+        }
+        if (contact == "")
+        {
+            $("#ContactNumberError").text("Please select valid date of birth");
+            isValid = false;
+        }
+        if (!favFoodPizza && !favFoodPasta && !favFoodPapNWors && !favFoodOther)
+        {
+            $("#FavFoodError").text("Please select your favorite food");
+            isValid = false;
+        }
+        if (watchMovies == null || listenRadio == null || eatOut == null || watchTV == null)
+        {
+            $("#RatingsError").text("Please select ratings for all categories");
+            isValid = false;
+        }
+        return isValid;
+    }
+
+    function InsertUserSurvey()
+    {
+        var name = $("#Name").val();
+        var email = $("#Email").val();
+        var DOB = $("#DateOfBirth").val();
+        var contact = $("#ContactNumber").val();
+
+        var favFoodPizza = $("#FavFoodPizza").is(':checked');
+        var favFoodPasta = $("#FavFoodPasta").is(':checked');
+        var favFoodPapNWors = $("#FavFoodPapNWors").is(':checked');
+        var favFoodOther = $("#FavFoodOther").is(':checked');
+
+        var watchMovies = $("input:radio[name ='Movies']:checked").val();
+        var listenRadio = $("input:radio[name ='Radio']:checked").val();
+        var eatOut = $("input:radio[name ='EatOut']:checked").val();
+        var watchTV = $("input:radio[name ='TV']:checked").val();
+
+        var isValidFormData = ValidateForm(name, email, DOB, contact, favFoodPizza, favFoodPasta, favFoodPapNWors, favFoodOther, watchMovies, listenRadio, eatOut, watchTV);
+
+        if (isValidFormData)
+        {
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("NewSurvey", "Survey")',
+                data: 
+                { 
+                    FullName: name, Email: email, DateOfBirth: DOB, ContactNumber: contact, 
+                    Pizza: favFoodPizza, Pasta: favFoodPasta, PapAndWors: favFoodPapNWors, Other: favFoodOther,
+                    WatchMovies: watchMovies, ListenRadio: listenRadio, EatOut: eatOut, WatchTV: watchTV
+                },
+                beforeSend: function ()
+                {
+                   
+                },
+                error: function (response)
+                {
+                    alert("Something went wrong");
+                },
+                success: function (response)
+                {
+                    window.location = "@Url.Action("SurveyResults", "Survey")";
+                }
+            });
+        }
+    }
+
+</script>

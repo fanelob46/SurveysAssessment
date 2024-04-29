@@ -1,0 +1,60 @@
+﻿@model SurveysAssessment.ViewModels.SurveyResultsViewModel
+
+@{
+    ViewData["Title"] = "Survey Results";
+}
+
+<div class="container">
+    <div class="text-center">
+        <h3>Survey Results</h3>
+    </div>
+    <div>
+        <div class="survey-results-table">
+            <div class="row">
+                <div class="col-md-9">Total number of surveys :</div>
+                <div class="col-md-3">@Model.TotalSurveys</div>
+            </div>
+            <div class="row">
+                <div class="col-md-9">Average Age :</div>
+                <div class="col-md-3">@Model.AverageAge</div>
+            </div>
+            <div class="row">
+                <div class="col-md-9">Oldest person who participated in survey :</div>
+                <div class="col-md-3">@Model.OldestAgeInSurvey</div>
+            </div>
+            <div class="row">
+                <div class="col-md-9">Youngest person who participated in survey :</div>
+                <div class="col-md-3">@Model.YoungestAgeInSurvey</div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-9">Percentage of people who like Pizza :</div>
+                <div class="col-md-3">@Model.LikePizzaPercent</div>
+            </div>
+            <div class="row">
+                <div class="col-md-9">Percentage of people who like Pasta :</div>
+                <div class="col-md-3">@Model.LikePastaPercent</div>
+            </div>
+            <div class="row">
+                <div class="col-md-9">Percentage of people who like Pap and Wors :</div>
+                <div class="col-md-3">@Model.LikePapAndWorsPercent</div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-9">People who like to watch movies :</div>
+                <div class="col-md-3"> @Model.WatchMoviesAverage</div>
+            </div>
+            <div class="row">
+                <div class="col-md-9">People who like to listen to radio :</div>
+                <div class="col-md-3">@Model.ListenRadioAverage</div>
+            </div>
+            <div class="row">
+                <div class="col-md-9">People who like to eat out :</div>
+                <div class="col-md-3">@Model.LikeEatOutAverage</div>
+            </div>
+            <div class="row">
+                <div class="col-md-9">People who like to watch TV :</div>
+                <div class="col-md-3">@Model.WatchTVAverage</div>
+            </div>
+        </div>
+    </div>
+
+</div>
